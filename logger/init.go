@@ -25,7 +25,7 @@ func GlobalLoad(level, serviceID, serviceName, serviceVersion string) error {
 		log.With(
 			kratoszap.NewLogger(zapLog),
 			"ts", log.DefaultTimestamp,
-			"caller", log.Caller(7),
+			"caller", log.Caller(6),
 			"service.id", serviceID,
 			"service.name", serviceName,
 			"service.version", serviceVersion,
