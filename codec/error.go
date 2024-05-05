@@ -40,7 +40,7 @@ func DefaultErrorEncoder(w http.ResponseWriter, r *http.Request, err error) {
 	}
 	body, e := json.Marshal(resp)
 	if nil != e {
-		logger.Errorf(context.Background(), "pkg.codec: %s", e.Error())
+		logger.ErrorfWithContext(context.Background(), "pkg.codec: %s", e.Error())
 		w.WriteHeader(http.StatusInternalServerError)
 		return
 	}
