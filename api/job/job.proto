@@ -1,0 +1,19 @@
+syntax = "proto3";
+package resdev.api.job;
+
+option go_package = "github.com/imkouga/kratos-pkg/api/job;job";
+option java_multiple_files = true;
+option java_package = "bt.baishancloud.com.resdev.pkg.api.job";
+option objc_class_prefix = "Job";
+
+import "google/protobuf/duration.proto";
+
+message JobConfig {
+  bool enabled = 1; // 执行器调度开关（是否允许调度执行）
+  string server_addr = 2;
+  string access_token = 3;
+  google.protobuf.Duration timeout = 4;
+  optional string executor_ip = 5;
+  optional int32 executor_port = 6;
+  optional string registry_key = 7;
+}

@@ -1,0 +1,13 @@
+syntax = "proto3";
+package resdev.api.tracing;
+
+option go_package = "github.com/imkouga/kratos-pkg/api/tracing;tracing";
+option java_multiple_files = true;
+option java_package = "bt.baishancloud.com.resdev.pkg.api.tracing";
+option objc_class_prefix = "Tracing";
+
+message Tracing {
+  string endpoint = 1;     // 链路上报服务入口
+  string service_name = 2 [deprecated = true]; // 服务名称
+  string custom_name = 3; // 服务名称
+}
