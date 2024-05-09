@@ -14,10 +14,6 @@ var ProviderSet = wire.NewSet(GlobalLogger)
 func GlobalLoad(level, serviceID, serviceName, serviceVersion string) error {
 	// 优化日志的输出体验
 	zapCfg := zap.NewProductionConfig()
-	// 防止 kratos log 的 key 重复; took https://github.com/go-kratos/kratos/issues/1722
-	zapCfg.EncoderConfig.TimeKey = ""
-	zapCfg.EncoderConfig.MessageKey = ""
-	zapCfg.EncoderConfig.CallerKey = ""
 	zapLog, _ := zapCfg.Build()
 	zap.ReplaceGlobals(zapLog)
 
