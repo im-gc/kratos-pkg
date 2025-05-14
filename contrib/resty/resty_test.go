@@ -1,7 +1,7 @@
 package resty_test
 
 import (
-	"github.com/imkouga/kratos-pkg/contrib/resty"
+	"github.com/im-gc/kratos-pkg/contrib/resty"
 	"testing"
 	"time"
 )

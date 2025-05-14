@@ -3,7 +3,7 @@ package mysql
 import (
 	"context"
 
-	gormHelper "github.com/imkouga/kratos-pkg/contrib/gorm"
+	gormHelper "github.com/im-gc/kratos-pkg/contrib/gorm"
 
 	"github.com/go-kratos/kratos/v2/log"
 	"gorm.io/gorm"

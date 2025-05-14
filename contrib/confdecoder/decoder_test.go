@@ -2,7 +2,7 @@ package confdecoder_test
 
 import (
 	"github.com/go-kratos/kratos/v2/config"
-	"github.com/imkouga/kratos-pkg/contrib/confdecoder"
+	"github.com/im-gc/kratos-pkg/contrib/confdecoder"
 	"testing"
 )
 

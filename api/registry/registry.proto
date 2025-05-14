@@ -1,7 +1,7 @@
 syntax = "proto3";
 package resdev.api.registry;
 
-option go_package = "github.com/imkouga/kratos-pkg/api/registry;registry";
+option go_package = "github.com/im-gc/kratos-pkg/api/registry;registry";
 option java_multiple_files = true;
 option java_package = "bt.baishancloud.com.resdev.pkg.api.registry";
 option objc_class_prefix = "Registry";

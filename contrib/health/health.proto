@@ -2,7 +2,7 @@ syntax = "proto3";
 
 package api.health;
 
-option go_package = "github.com/imkouga/kratos-pkg/contrib/health;health";
+option go_package = "github.com/im-gc/kratos-pkg/contrib/health;health";
 option java_multiple_files = true;
 option java_package = "api.health";
 

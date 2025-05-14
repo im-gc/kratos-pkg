@@ -7,7 +7,7 @@ import (
 	"errors"
 	"time"
 
-	center "github.com/imkouga/kratos-pkg/inspect/alarmer/workCenter"
+	center "github.com/im-gc/kratos-pkg/inspect/alarmer/workCenter"
 )
 
 func Init(cMetric string) error {

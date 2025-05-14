@@ -5,7 +5,7 @@ import (
 	"fmt"
 
 	"github.com/go-kratos/kratos/v2/log"
-	"github.com/imkouga/kratos-pkg/inspect"
+	"github.com/im-gc/kratos-pkg/inspect"
 )
 
 type Option func(j *JobSet)

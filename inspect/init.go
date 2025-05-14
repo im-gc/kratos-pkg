@@ -4,7 +4,7 @@ import (
 	"os"
 	"path/filepath"
 
-	"github.com/imkouga/kratos-pkg/inspect/alarmer"
+	"github.com/im-gc/kratos-pkg/inspect/alarmer"
 )
 
 const (

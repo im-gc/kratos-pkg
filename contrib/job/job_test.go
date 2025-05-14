@@ -5,9 +5,9 @@ import (
 	"fmt"
 	"github.com/go-kratos/kratos/v2/log"
 	"github.com/go-kratos/kratos/v2/middleware/tracing"
-	"github.com/imkouga/kratos-pkg/contrib/job"
-	"github.com/imkouga/kratos-pkg/contrib/trace"
-	"github.com/imkouga/kratos-pkg/contrib/zaplog"
+	"github.com/im-gc/kratos-pkg/contrib/job"
+	"github.com/im-gc/kratos-pkg/contrib/trace"
+	"github.com/im-gc/kratos-pkg/contrib/zaplog"
 	"testing"
 )
 

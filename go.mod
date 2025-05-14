@@ -1,4 +1,4 @@
-module github.com/imkouga/kratos-pkg
+module github.com/im-gc/kratos-pkg
 
 go 1.21.0
 

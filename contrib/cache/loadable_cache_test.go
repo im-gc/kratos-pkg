@@ -3,7 +3,7 @@ package cache_test
 import (
 	"context"
 	"fmt"
-	"github.com/imkouga/kratos-pkg/contrib/cache"
+	"github.com/im-gc/kratos-pkg/contrib/cache"
 	"go.opentelemetry.io/otel"
 	"testing"
 	"time"

@@ -1,7 +1,7 @@
 syntax = "proto3";
 package resdev.api.job;
 
-option go_package = "github.com/imkouga/kratos-pkg/api/job;job";
+option go_package = "github.com/im-gc/kratos-pkg/api/job;job";
 option java_multiple_files = true;
 option java_package = "bt.baishancloud.com.resdev.pkg.api.job";
 option objc_class_prefix = "Job";

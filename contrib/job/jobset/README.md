@@ -10,7 +10,7 @@
 ```
 在main.go中初始化监控包
 
-import "github.com/imkouga/kratos-pkg/inspect"
+import "github.com/im-gc/kratos-pkg/inspect"
 
 if err := inspect.Init1("组件名", "推送至监控的metric"); nil != err {
     // do something
@@ -20,7 +20,7 @@ if err := inspect.Init1("组件名", "推送至监控的metric"); nil != err {
 ```
 // job示例
 
-import "github.com/imkouga/kratos-pkg/contrib/job/jobset"
+import "github.com/im-gc/kratos-pkg/contrib/job/jobset"
 
 NodeJob struct {
     *BaseSet

@@ -1,7 +1,7 @@
 package trace_test
 
 import (
-	"github.com/imkouga/kratos-pkg/contrib/trace"
+	"github.com/im-gc/kratos-pkg/contrib/trace"
 	"testing"
 )
 

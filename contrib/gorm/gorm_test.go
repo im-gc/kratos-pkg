@@ -3,7 +3,7 @@ package gorm_test
 import (
 	"fmt"
 	"github.com/go-kratos/kratos/v2/log"
-	contrib "github.com/imkouga/kratos-pkg/contrib/gorm"
+	contrib "github.com/im-gc/kratos-pkg/contrib/gorm"
 	"github.com/stretchr/testify/assert"
 	"gorm.io/driver/sqlite"
 	"gorm.io/gorm"

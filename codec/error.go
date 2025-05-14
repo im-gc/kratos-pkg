@@ -5,7 +5,7 @@ import (
 	"encoding/json"
 	"net/http"
 
-	"github.com/imkouga/kratos-pkg/logger"
+	"github.com/im-gc/kratos-pkg/logger"
 
 	"github.com/go-kratos/kratos/v2/errors"
 )

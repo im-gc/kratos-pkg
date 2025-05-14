@@ -13,7 +13,7 @@ import (
 	"log"
 
 	"github.com/gin-gonic/gin"
-	kgin "github.com/imkouga/kratos-pkg/contrib/gin"
+	kgin "github.com/im-gc/kratos-pkg/contrib/gin"
 	"github.com/go-kratos/kratos/v2"
 	"github.com/go-kratos/kratos/v2/errors"
 	"github.com/go-kratos/kratos/v2/middleware"
