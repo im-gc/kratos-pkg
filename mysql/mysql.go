@@ -2,6 +2,7 @@ package mysql
 
 import (
 	"context"
+	"time"
 
 	gormHelper "github.com/im-gc/kratos-pkg/contrib/gorm"
 
@@ -19,6 +20,7 @@ type MySQL struct {
 
 type Transaction interface {
 	ExecTx(context.Context, func(ctx context.Context) error) error
+	ExecTxPlus(context.Context, func(ctx context.Context) error, time.Duration, func(ctx context.Context) error) error
 }
 
 type Option interface {
@@ -55,6 +57,34 @@ func (t *Transactor) ExecTx(ctx context.Context, fn func(ctx context.Context) er
 	return t.db.WithContext(ctx).Transaction(func(tx *gorm.DB) error {
 		ctx = context.WithValue(ctx, contextTxKey{}, tx)
 		return fn(ctx)
+	})
+}
+
+// ExecTx gorm Transaction
+// fn执行成功后，延迟delayCommit后再提交事务，再延迟期间同步执行fn2
+// fn2的执行结果不会影响fn的事务一致性
+func (d *MySQL) ExecTxPlus(ctx context.Context, fn func(ctx context.Context) error, delayCommit time.Duration, fn2 func(ctx context.Context) error) error {
+	return d.DB(ctx).WithContext(ctx).Transaction(func(tx *gorm.DB) error {
+		ctx = context.WithValue(ctx, contextTxKey{}, tx)
+		if err := fn(ctx); nil != err {
+			return err
+		}
+
+		finishFn2 := make(chan struct{}, 1)
+		defer close(finishFn2)
+		go func() {
+			fn2(ctx)
+			finishFn2 <- struct{}{}
+		}()
+
+		delay := time.NewTicker(delayCommit)
+		defer delay.Stop()
+		select {
+		case <-delay.C:
+		case <-finishFn2:
+		}
+
+		return nil
 	})
 }
 
